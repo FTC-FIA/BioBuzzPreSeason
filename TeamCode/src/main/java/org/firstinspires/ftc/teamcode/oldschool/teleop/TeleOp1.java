@@ -45,6 +45,8 @@ public class TeleOp1 extends LinearOpMode {
             // Send power to the motors
             drive.drive(x, y, r);
 
+
+
             panelsTelemetry.addData("Status", "Running");
             panelsTelemetry.addData("Raw LY", ly);
             panelsTelemetry.addData("Raw LX", lx);

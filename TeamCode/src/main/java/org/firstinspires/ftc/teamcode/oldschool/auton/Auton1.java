@@ -26,25 +26,33 @@ public class Auton1 extends LinearOpMode {
         // This 'hardwareMap' variable is inherited from LinearOpMode.
         drive = new MecanumDrive(hardwareMap);
 
-        panelsTelemetry.addData("Status", "Initialized");
-        panelsTelemetry.update();
+        if (panelsTelemetry.log() != null) {
+            panelsTelemetry.log().add("Status: Initialized");
+        }
 
         // Wait for the game to start (driver presses START)
         waitForStart();
         runtime.reset();
 
+        if (panelsTelemetry.log() != null) {
+            panelsTelemetry.log().add("Status: Started");
+        }
+
         // 3. Drive forward for 1 second
         while (opModeIsActive() && runtime.seconds() < 1.0) {
             drive.drive(0, RobotConfig.AUTON_SPEED, 0); // Use configurable speed
-            panelsTelemetry.addData("Path", "Driving Forward: %2.1f S", runtime.seconds());
-            panelsTelemetry.update();
+            // Using log for path updates will create a scrolling list of messages
+            if (panelsTelemetry.log() != null) {
+                panelsTelemetry.log().add(String.format("Path: Driving Forward: %2.1f S", runtime.seconds()));
+            }
         }
 
         // 4. Stop the robot
         drive.stop();
 
-        panelsTelemetry.addData("Status", "Complete");
-        panelsTelemetry.update();
+        if (panelsTelemetry.log() != null) {
+            panelsTelemetry.log().add("Status: Complete");
+        }
         sleep(1000); // Pause to let the user see the message
     }
 }

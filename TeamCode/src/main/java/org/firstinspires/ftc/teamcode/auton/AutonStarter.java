@@ -7,6 +7,7 @@ import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.hardware.CRServo;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.DcMotorEx;
+import com.qualcomm.robotcore.hardware.DcMotorSimple;
 
 @Autonomous(name = "Auton Starter", group = "Autonomous")
 public class AutonStarter extends LinearOpMode {
@@ -22,21 +23,24 @@ public class AutonStarter extends LinearOpMode {
     public void runOpMode() {
 
         // Hardware "names" must match what was assigned on Driver Station
-        leftDrive = hardwareMap.get(DcMotor.class, "rear_left");
-        rightDrive = hardwareMap.get(DcMotor.class, "rear_right");
-        intake = hardwareMap.get(DcMotorEx.class, "intake_motor");
+        leftDrive = hardwareMap.get(DcMotor.class, "left_drive");
+        rightDrive = hardwareMap.get(DcMotor.class, "right_drive");
+        intake = hardwareMap.get(DcMotorEx.class, "intake");
         leftIntakeServo = hardwareMap.get(
                 CRServo.class,
-                "left_intake_servo"
+                "left intake"
         );
         rightIntakeServo = hardwareMap.get(
                 CRServo.class,
-                "right_intake_servo"
+                "right intake"
         );
 
         // Set this according to how the motors were installed
-        leftDrive.setDirection(DcMotor.Direction.FORWARD);
-        rightDrive.setDirection(DcMotor.Direction.REVERSE);
+        leftDrive.setDirection(DcMotor.Direction.REVERSE);
+        rightDrive.setDirection(DcMotor.Direction.FORWARD);
+        intake.setDirection(DcMotor.Direction.REVERSE);
+        rightIntakeServo.setDirection(DcMotor.Direction.REVERSE);
+        leftIntakeServo.setDirection(DcMotor.Direction.REVERSE);
 
         // Configures motors to "brake" and not drift when power = 0
         leftDrive.setZeroPowerBehavior(BRAKE);
@@ -66,6 +70,11 @@ public class AutonStarter extends LinearOpMode {
         // Drive forward for 1 sec
         moveForward(drivePower, 1000);
 
+        // Turn left for 0.5 sec
+        turn(true, drivePower, 500);
+
+        sleep(2000);
+
         // Shut it down
         intake.setPower(0);
         leftIntakeServo.setPower(0);
@@ -75,6 +84,19 @@ public class AutonStarter extends LinearOpMode {
     private void moveForward(double power, int durationInMs) {
         leftDrive.setPower(power);
         rightDrive.setPower(power);
+        sleep(durationInMs);
+        leftDrive.setPower(0);
+        rightDrive.setPower(0);
+    }
+
+    private void turn(boolean isLeft, double power, int durationInMs) {
+        if (isLeft) {
+            leftDrive.setPower(power);
+            rightDrive.setPower(-power);
+        } else {
+            leftDrive.setPower(-power);
+            rightDrive.setPower(power);
+        }
         sleep(durationInMs);
         leftDrive.setPower(0);
         rightDrive.setPower(0);

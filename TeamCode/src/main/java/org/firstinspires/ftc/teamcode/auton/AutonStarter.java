@@ -2,20 +2,12 @@ package org.firstinspires.ftc.teamcode.auton;
 
 import static com.qualcomm.robotcore.hardware.DcMotor.ZeroPowerBehavior.BRAKE;
 
-import com.bylazar.telemetry.PanelsTelemetry;
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.hardware.CRServo;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.DcMotorEx;
-import com.qualcomm.robotcore.util.ElapsedTime;
-import org.firstinspires.ftc.robotcore.external.Telemetry;
-import org.firstinspires.ftc.teamcode.RobotConfig;
-import org.firstinspires.ftc.teamcode.subsystems.MecanumDrive;
 
-/**
- * A simple Autonomous OpMode demonstrating the usage of the MecanumDrive subsystem.
- */
 @Autonomous(name = "Auton Starter", group = "Autonomous")
 public class AutonStarter extends LinearOpMode {
 
@@ -33,8 +25,14 @@ public class AutonStarter extends LinearOpMode {
         leftDrive = hardwareMap.get(DcMotor.class, "rear_left");
         rightDrive = hardwareMap.get(DcMotor.class, "rear_right");
         intake = hardwareMap.get(DcMotorEx.class, "intake_motor");
-        leftIntakeServo = hardwareMap.get(CRServo.class, "left_intake_servo");
-        rightIntakeServo = hardwareMap.get(CRServo.class, "right_intake_servo");
+        leftIntakeServo = hardwareMap.get(
+                CRServo.class,
+                "left_intake_servo"
+        );
+        rightIntakeServo = hardwareMap.get(
+                CRServo.class,
+                "right_intake_servo"
+        );
 
         // Set this according to how the motors were installed
         leftDrive.setDirection(DcMotor.Direction.FORWARD);

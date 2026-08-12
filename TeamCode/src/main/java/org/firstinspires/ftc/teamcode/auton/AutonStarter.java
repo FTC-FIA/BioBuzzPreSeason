@@ -11,7 +11,7 @@ import com.qualcomm.robotcore.hardware.DcMotorEx;
 @Autonomous(name = "Auton Starter", group = "Autonomous")
 public class AutonStarter extends LinearOpMode {
 
-    // Declare OpMode members.
+    // Declare OpMode members
     private DcMotor leftDrive = null;
     private DcMotor rightDrive = null;
     private DcMotor intake = null;
@@ -74,6 +74,5 @@ public class AutonStarter extends LinearOpMode {
         intake.setPower(0);
         leftIntakeServo.setPower(0);
         rightIntakeServo.setPower(0);
-
     }
 }

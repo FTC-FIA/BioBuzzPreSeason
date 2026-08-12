@@ -37,6 +37,9 @@ public class AutonStarter extends LinearOpMode {
         // Set this according to how the motors were installed
         leftDrive.setDirection(DcMotor.Direction.REVERSE);
         rightDrive.setDirection(DcMotor.Direction.FORWARD);
+        intake.setDirection(DcMotor.Direction.REVERSE);
+        rightIntakeServo.setDirection(DcMotor.Direction.REVERSE);
+        leftIntakeServo.setDirection(DcMotor.Direction.REVERSE);
 
         // Configures motors to "brake" and not drift when power = 0
         leftDrive.setZeroPowerBehavior(BRAKE);

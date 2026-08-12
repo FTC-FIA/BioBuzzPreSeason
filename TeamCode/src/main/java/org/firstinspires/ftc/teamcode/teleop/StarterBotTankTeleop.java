@@ -30,7 +30,7 @@
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-package org.firstinspires.ftc.teamcode;
+package org.firstinspires.ftc.teamcode.teleop;
 
 import static com.qualcomm.robotcore.hardware.DcMotor.ZeroPowerBehavior.BRAKE;
 
@@ -49,7 +49,7 @@ import com.qualcomm.robotcore.hardware.DcMotorSimple;
 
 @TeleOp(name = "StarterBot Chassis Teleop", group = "StarterBot")
 //@Disabled
-public class StarterBotChassisTeleop extends OpMode {
+public class StarterBotTankTeleop extends OpMode {
 
     // Declare OpMode members.
     private DcMotor leftDrive = null;

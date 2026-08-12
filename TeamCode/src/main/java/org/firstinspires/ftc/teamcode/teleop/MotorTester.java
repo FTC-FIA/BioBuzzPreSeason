@@ -1,9 +1,9 @@
-package org.firstinspires.ftc.teamcode.oldschool.teleop;
+package org.firstinspires.ftc.teamcode.teleop;
 
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.DcMotor;
-import org.firstinspires.ftc.teamcode.oldschool.RobotConfig;
+import org.firstinspires.ftc.teamcode.RobotConfig;
 
 /**
  * MotorTester allows testing individual drive motors using the Dpad.

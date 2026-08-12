@@ -1,4 +1,4 @@
-package org.firstinspires.ftc.teamcode.oldschool.teleop;
+package org.firstinspires.ftc.teamcode.teleop;
 
 import com.bylazar.gamepad.PanelsGamepad;
 import com.bylazar.telemetry.PanelsTelemetry;
@@ -6,14 +6,14 @@ import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.Gamepad;
 import org.firstinspires.ftc.robotcore.external.Telemetry;
-import org.firstinspires.ftc.teamcode.oldschool.subsystems.MecanumDrive;
+import org.firstinspires.ftc.teamcode.subsystems.MecanumDrive;
 
 /**
  * A standard Mecanum TeleOp that uses Panels Gamepad managers.
  * This allows control via physical controllers or the Panels Dashboard simulator.
  */
-@TeleOp(name = "Old School TeleOp", group = "TeleOp")
-public class TeleOp1 extends LinearOpMode {
+@TeleOp(name = "Panels Test TeleOp", group = "TeleOp")
+public class PanelsTestTeleOp extends LinearOpMode {
 
     @Override
     public void runOpMode() {

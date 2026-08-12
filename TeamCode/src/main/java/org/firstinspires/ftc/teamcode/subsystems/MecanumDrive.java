@@ -1,9 +1,9 @@
-package org.firstinspires.ftc.teamcode.oldschool.subsystems;
+package org.firstinspires.ftc.teamcode.subsystems;
 
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.DcMotorSimple;
 import com.qualcomm.robotcore.hardware.HardwareMap;
-import org.firstinspires.ftc.teamcode.oldschool.RobotConfig;
+import org.firstinspires.ftc.teamcode.RobotConfig;
 
 /**
  * A simple Mecanum Drive subsystem using the standard FTC HardwareMap pattern.

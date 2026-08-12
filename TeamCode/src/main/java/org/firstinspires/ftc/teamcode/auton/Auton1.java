@@ -1,12 +1,12 @@
-package org.firstinspires.ftc.teamcode.oldschool.auton;
+package org.firstinspires.ftc.teamcode.auton;
 
 import com.bylazar.telemetry.PanelsTelemetry;
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.util.ElapsedTime;
 import org.firstinspires.ftc.robotcore.external.Telemetry;
-import org.firstinspires.ftc.teamcode.oldschool.RobotConfig;
-import org.firstinspires.ftc.teamcode.oldschool.subsystems.MecanumDrive;
+import org.firstinspires.ftc.teamcode.RobotConfig;
+import org.firstinspires.ftc.teamcode.subsystems.MecanumDrive;
 
 /**
  * A simple Autonomous OpMode demonstrating the usage of the MecanumDrive subsystem.

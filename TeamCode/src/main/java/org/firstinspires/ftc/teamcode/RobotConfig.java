@@ -1,4 +1,4 @@
-package org.firstinspires.ftc.teamcode.oldschool;
+package org.firstinspires.ftc.teamcode;
 
 import com.bylazar.configurables.annotations.Configurable;
 

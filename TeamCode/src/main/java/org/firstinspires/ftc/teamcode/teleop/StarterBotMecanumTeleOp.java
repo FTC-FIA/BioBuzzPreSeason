@@ -30,7 +30,7 @@
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-package org.firstinspires.ftc.teamcode.oldschool.teleop;
+package org.firstinspires.ftc.teamcode.teleop;
 
 import static com.qualcomm.robotcore.hardware.DcMotor.ZeroPowerBehavior.BRAKE;
 
@@ -39,15 +39,15 @@ import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.CRServo;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.DcMotorSimple;
-import org.firstinspires.ftc.teamcode.oldschool.RobotConfig;
-import org.firstinspires.ftc.teamcode.oldschool.subsystems.MecanumDrive;
+import org.firstinspires.ftc.teamcode.RobotConfig;
+import org.firstinspires.ftc.teamcode.subsystems.MecanumDrive;
 
 /**
  * TeleOp2 is a modified version of StarterBotChassisTeleop.
  * It uses the MecanumDrive subsystem and standard FTC telemetry/gamepads.
  */
 @TeleOp(name = "TeleOp2", group = "TeleOp")
-public class TeleOp2 extends LinearOpMode {
+public class StarterBotMecanumTeleOp extends LinearOpMode {
 
     @Override
     public void runOpMode() {

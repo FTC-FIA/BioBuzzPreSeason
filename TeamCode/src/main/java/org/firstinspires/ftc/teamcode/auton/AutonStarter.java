@@ -8,7 +8,7 @@ import com.qualcomm.robotcore.hardware.CRServo;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.DcMotorEx;
 
-@Autonomous(name = "Auton Starter", group = "Autonomous")
+@Autonomous(name = "Tillman Thoburn", group = "Autonomous")
 public class AutonStarter extends LinearOpMode {
 
     // Declare OpMode members

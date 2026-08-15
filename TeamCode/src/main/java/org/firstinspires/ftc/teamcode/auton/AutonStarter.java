@@ -91,18 +91,15 @@ public class AutonStarter extends LinearOpMode {
 
     private void turn(boolean isLeft, double power, int durationInMs) {
         if (isLeft) {
-            leftDrive.setPower(power);
-            rightDrive.setPower(-power);
-        } else {
             leftDrive.setPower(-power);
             rightDrive.setPower(power);
+        } else {
+            leftDrive.setPower(power);
+            rightDrive.setPower(-power);
         }
         sleep(durationInMs);
         leftDrive.setPower(0);
         rightDrive.setPower(0);
     }
 
-    private void moveForward(double power, int durationInMs) {
-        //placeholder
-    }
 }

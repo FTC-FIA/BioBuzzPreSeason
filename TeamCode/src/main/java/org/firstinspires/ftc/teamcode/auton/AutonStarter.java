@@ -101,4 +101,8 @@ public class AutonStarter extends LinearOpMode {
         leftDrive.setPower(0);
         rightDrive.setPower(0);
     }
+
+    private void moveForward(double power, int durationInMs) {
+        //placeholder
+    }
 }

@@ -76,4 +76,8 @@ public class AutonStarter extends LinearOpMode {
         rightIntakeServo.setPower(0);
 
     }
+
+    private void moveForward(double power, int durationInMs) {
+        //placeholder
+    }
 }

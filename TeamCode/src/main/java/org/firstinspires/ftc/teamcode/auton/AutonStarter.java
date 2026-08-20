@@ -66,9 +66,16 @@ public class AutonStarter extends LinearOpMode {
         leftIntakeServo.setPower(intakeServoPower);
         rightIntakeServo.setPower(intakeServoPower);
 
-
+        // Program Starts!!
         moveForward(drivePower, 1000);
-
+        turnLeft(drivePower, 250);
+        moveForward(drivePower, 1000);
+        turnLeft(drivePower, 250);
+        moveForward(drivePower, 1000);
+        turnLeft(drivePower, 250);
+        moveForward(drivePower, 1000);
+        turnLeft(drivePower, 250);
+        moveForward(drivePower, 1000);
 
 
         // Shut it down
@@ -83,17 +90,10 @@ public class AutonStarter extends LinearOpMode {
         sleep(1000); // 1 sec = 1000 milliseconds
         leftDrive.setPower(0);
         rightDrive.setPower(0);
-
-        leftDrive.setPower(power);
+    }
+    private void turnLeft(double power, int durationInMs){
+        //Turn Left 90
         rightDrive.setPower(power);
-        sleep(durationInMs);
-        leftDrive.setPower(0);
-        rightDrive.setPower(0);
-
-        leftDrive.setPower(power);
-        rightDrive.setPower(power);
-        sleep(durationInMs);
-        leftDrive.setPower(0);
-        rightDrive.setPower(0);
+        sleep(250);
     }
 }

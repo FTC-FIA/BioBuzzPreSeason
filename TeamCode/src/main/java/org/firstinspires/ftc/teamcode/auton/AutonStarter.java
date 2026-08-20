@@ -61,21 +61,26 @@ public class AutonStarter extends LinearOpMode {
         double intakePower = 1.0;
         double intakeServoPower = 1.0;
 
-        // Turn on the intake, let it run continuously
-        intake.setPower(intakePower);
+                // Turn on the intake, let it run continuously
+                intake.setPower(intakePower);
         leftIntakeServo.setPower(intakeServoPower);
         rightIntakeServo.setPower(intakeServoPower);
 
-        // Drive forward for 1 sec
-        leftDrive.setPower(drivePower);
-        rightDrive.setPower(drivePower);
-        sleep(1000); // 1 sec = 1000 milliseconds
-        leftDrive.setPower(0);
-        rightDrive.setPower(0);
+        moveForward(drivePower, 1000);
 
         // Shut it down
         intake.setPower(0);
         leftIntakeServo.setPower(0);
         rightIntakeServo.setPower(0);
     }
+
+    private void moveForward(double power, int durationInMs) {
+        leftDrive.setPower(power);
+        rightDrive.setPower(power);
+        sleep(1000); // 1 sec = 1000 milliseconds
+        leftDrive.setPower(0);
+        rightDrive.setPower(0);
+
+    }
+
 }

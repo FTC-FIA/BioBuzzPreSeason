@@ -75,42 +75,42 @@ public class AutonStarter extends LinearOpMode {
     }
 
     private void moveForward(double power, int durationInMs) {
-        leftDrive.setPower(power);
+        leftDrive.setPower(power); //go forward 1
         rightDrive.setPower(power);
         sleep(durationInMs); // 1 sec = 1000 milliseconds
         leftDrive.setPower(0);
         rightDrive.setPower(0);
         sleep(1500);
-        leftDrive.setPower(-power);
+        leftDrive.setPower(-power); //turn 1
         rightDrive.setPower(power);
         sleep(335);
         leftDrive.setPower(0);
         rightDrive.setPower(0);
         sleep(1500);
-        leftDrive.setPower(power);
+        leftDrive.setPower(power); //go forward 2
         rightDrive.setPower(power);
-        sleep(2000); // 1 sec = 1000 milliseconds
+        sleep(2000);
         leftDrive.setPower(0);
         rightDrive.setPower(0);
         sleep(1500);
-        leftDrive.setPower(-power);
+        leftDrive.setPower(-power); //turn 2
+        rightDrive.setPower(power);
+        sleep(350);
+        leftDrive.setPower(0);
+        rightDrive.setPower(0);
+        leftDrive.setPower(power); //go forward 3
+        rightDrive.setPower(power);
+        sleep(durationInMs);
+        leftDrive.setPower(0);
+        rightDrive.setPower(0);
+        sleep(1500);
+        leftDrive.setPower(-power); //turn 3
         rightDrive.setPower(power);
         sleep(335);
         leftDrive.setPower(0);
         rightDrive.setPower(0);
-        leftDrive.setPower(power);
-        rightDrive.setPower(power);
-        sleep(durationInMs); // 1 sec = 1000 milliseconds
-        leftDrive.setPower(0);
-        rightDrive.setPower(0);
         sleep(1500);
-        leftDrive.setPower(-power);
-        rightDrive.setPower(power);
-        sleep(335);
-        leftDrive.setPower(0);
-        rightDrive.setPower(0);
-        sleep(1500);
-        leftDrive.setPower(power);
+        leftDrive.setPower(power); //go forward 4
         rightDrive.setPower(power);
         sleep(2000); // 1 sec = 1000 milliseconds
         leftDrive.setPower(0);

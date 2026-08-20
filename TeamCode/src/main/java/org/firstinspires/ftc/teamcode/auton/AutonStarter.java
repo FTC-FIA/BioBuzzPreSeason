@@ -83,13 +83,42 @@ public class AutonStarter extends LinearOpMode {
         sleep(1500);
         leftDrive.setPower(-power);
         rightDrive.setPower(power);
-        sleep(350);
+        sleep(335);
         leftDrive.setPower(0);
         rightDrive.setPower(0);
         sleep(1500);
         leftDrive.setPower(power);
         rightDrive.setPower(power);
         sleep(2000); // 1 sec = 1000 milliseconds
+        leftDrive.setPower(0);
+        rightDrive.setPower(0);
+        sleep(1500);
+        leftDrive.setPower(-power);
+        rightDrive.setPower(power);
+        sleep(335);
+        leftDrive.setPower(0);
+        rightDrive.setPower(0);
+        leftDrive.setPower(power);
+        rightDrive.setPower(power);
+        sleep(durationInMs); // 1 sec = 1000 milliseconds
+        leftDrive.setPower(0);
+        rightDrive.setPower(0);
+        sleep(1500);
+        leftDrive.setPower(-power);
+        rightDrive.setPower(power);
+        sleep(335);
+        leftDrive.setPower(0);
+        rightDrive.setPower(0);
+        sleep(1500);
+        leftDrive.setPower(power);
+        rightDrive.setPower(power);
+        sleep(2000); // 1 sec = 1000 milliseconds
+        leftDrive.setPower(0);
+        rightDrive.setPower(0);
+        sleep(1500);
+        leftDrive.setPower(-power);
+        rightDrive.setPower(power);
+        sleep(335);
         leftDrive.setPower(0);
         rightDrive.setPower(0);
 

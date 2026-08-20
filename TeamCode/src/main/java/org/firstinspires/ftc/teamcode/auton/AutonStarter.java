@@ -116,7 +116,7 @@ public class AutonStarter extends LinearOpMode {
         leftDrive.setPower(0);
         rightDrive.setPower(0);
         sleep(1500);
-        leftDrive.setPower(-power);
+        leftDrive.setPower(-power); //turn 4
         rightDrive.setPower(power);
         sleep(335);
         leftDrive.setPower(0);

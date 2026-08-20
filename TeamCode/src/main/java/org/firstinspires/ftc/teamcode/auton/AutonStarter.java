@@ -68,13 +68,13 @@ public class AutonStarter extends LinearOpMode {
 
         // Program Starts!!
         moveForward(drivePower, 1000);
-        turnLeft(drivePower, 250);
+        turnLeft(drivePower, 500);
         moveForward(drivePower, 1000);
-        turnLeft(drivePower, 250);
+        turnLeft(drivePower, 500);
         moveForward(drivePower, 1000);
-        turnLeft(drivePower, 250);
+        turnLeft(drivePower, 500);
         moveForward(drivePower, 1000);
-        turnLeft(drivePower, 250);
+        turnLeft(drivePower, 500);
         moveForward(drivePower, 1000);
 
 

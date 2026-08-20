@@ -67,10 +67,10 @@ public class AutonStarter extends LinearOpMode {
         leftIntakeServo.setPower(intakeServoPower);
         rightIntakeServo.setPower(intakeServoPower);
 
-        moveForward(drivePower, 750);
-        turnLeft(drivePower, 375);
-        moveForward(drivePower, 750*2);
-        turnLeft(drivePower, 375);
+        moveForward(drivePower, 800);
+        turnLeft(drivePower, 400);
+        moveForward(drivePower, 800*2);
+        turnLeft(drivePower, 400);
 
         // Shut it down
         intake.setPower(0);

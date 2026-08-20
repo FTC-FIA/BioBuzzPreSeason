@@ -8,7 +8,7 @@ import com.qualcomm.robotcore.hardware.CRServo;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.DcMotorEx;
 
-@Autonomous(name = "Auton Starter", group = "Autonomous")
+@Autonomous(name = "Dami Shiyanbola", group = "Autonomous")
 public class AutonStarter extends LinearOpMode {
 
     // Declare OpMode members
@@ -35,8 +35,8 @@ public class AutonStarter extends LinearOpMode {
         );
 
         // Set this according to how the motors were installed
-        leftDrive.setDirection(DcMotor.Direction.REVERSE);
-        rightDrive.setDirection(DcMotor.Direction.FORWARD);
+        leftDrive.setDirection(DcMotor.Direction.FORWARD);
+        rightDrive.setDirection(DcMotor.Direction.REVERSE);
         intake.setDirection(DcMotor.Direction.REVERSE);
         rightIntakeServo.setDirection(DcMotor.Direction.REVERSE);
         leftIntakeServo.setDirection(DcMotor.Direction.REVERSE);

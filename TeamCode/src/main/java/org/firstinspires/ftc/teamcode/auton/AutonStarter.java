@@ -61,8 +61,8 @@ public class AutonStarter extends LinearOpMode {
         double intakePower = 1.0;
         double intakeServoPower = 1.0;
 
-                // Turn on the intake, let it run continuously
-                intake.setPower(intakePower);
+        // Turn on the intake, let it run continuously
+        intake.setPower(intakePower);
         leftIntakeServo.setPower(intakeServoPower);
         rightIntakeServo.setPower(intakeServoPower);
 

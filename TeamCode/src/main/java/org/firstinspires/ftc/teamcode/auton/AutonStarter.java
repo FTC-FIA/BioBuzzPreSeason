@@ -8,7 +8,7 @@ import com.qualcomm.robotcore.hardware.CRServo;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.DcMotorEx;
 
-@Autonomous(name = "Auton Starter", group = "Autonomous")
+@Autonomous(name = "Auton Abram", group = "Autonomous")
 public class AutonStarter extends LinearOpMode {
 
     // Declare OpMode members
@@ -35,8 +35,8 @@ public class AutonStarter extends LinearOpMode {
         );
 
         // Set this according to how the motors were installed
-        leftDrive.setDirection(DcMotor.Direction.REVERSE);
-        rightDrive.setDirection(DcMotor.Direction.FORWARD);
+        leftDrive.setDirection(DcMotor.Direction.FORWARD);
+        rightDrive.setDirection(DcMotor.Direction.REVERSE);
         intake.setDirection(DcMotor.Direction.REVERSE);
         rightIntakeServo.setDirection(DcMotor.Direction.REVERSE);
         leftIntakeServo.setDirection(DcMotor.Direction.REVERSE);
@@ -66,7 +66,7 @@ public class AutonStarter extends LinearOpMode {
         leftIntakeServo.setPower(intakeServoPower);
         rightIntakeServo.setPower(intakeServoPower);
 
-        moveForward(drivePower, 1000);
+        moveForward(drivePower, 950);
 
         // Shut it down
         intake.setPower(0);
@@ -77,7 +77,13 @@ public class AutonStarter extends LinearOpMode {
     private void moveForward(double power, int durationInMs) {
         leftDrive.setPower(power);
         rightDrive.setPower(power);
-        sleep(1000); // 1 sec = 1000 milliseconds
+        sleep(durationInMs); // 1 sec = 1000 milliseconds
+        leftDrive.setPower(0);
+        rightDrive.setPower(0);
+        sleep(2000);
+        leftDrive.setPower(-power);
+        rightDrive.setPower(power);
+        sleep(500);
         leftDrive.setPower(0);
         rightDrive.setPower(0);
 

@@ -7,8 +7,9 @@ import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.hardware.CRServo;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.DcMotorEx;
+import com.qualcomm.robotcore.hardware.DcMotorSimple;
 
-@Autonomous(name = "Auton Starter", group = "Autonomous")
+@Autonomous(name = "Gavin Starter", group = "Autonomous")
 public class AutonStarter extends LinearOpMode {
 
     // Declare OpMode members
@@ -35,8 +36,8 @@ public class AutonStarter extends LinearOpMode {
         );
 
         // Set this according to how the motors were installed
-        leftDrive.setDirection(DcMotor.Direction.REVERSE);
-        rightDrive.setDirection(DcMotor.Direction.FORWARD);
+        leftDrive.setDirection(DcMotor.Direction.FORWARD);
+        rightDrive.setDirection(DcMotor.Direction.REVERSE);
         intake.setDirection(DcMotor.Direction.REVERSE);
         rightIntakeServo.setDirection(DcMotor.Direction.REVERSE);
         leftIntakeServo.setDirection(DcMotor.Direction.REVERSE);
@@ -66,7 +67,10 @@ public class AutonStarter extends LinearOpMode {
         leftIntakeServo.setPower(intakeServoPower);
         rightIntakeServo.setPower(intakeServoPower);
 
-        moveForward(drivePower, 1000);
+        moveForward(drivePower, 650);
+        turnLeft(drivePower, 500);
+        moveForward(drivePower, 650*2);
+        turnLeft(drivePower, 500);
 
         // Shut it down
         intake.setPower(0);
@@ -83,6 +87,18 @@ public class AutonStarter extends LinearOpMode {
         rightDrive.setPower(0);
 
     }
+
+    private void turnLeft(double power, int durationInMs){
+        leftDrive.setPower(-power);
+        rightDrive.setPower(power);
+        sleep(durationInMs);
+        leftDrive.setPower(0);
+        rightDrive.setPower(0);
+
+    }
+
+
+
 
 
     
